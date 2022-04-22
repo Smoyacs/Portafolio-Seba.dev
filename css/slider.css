@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto';
+    box-sizing: content-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    overflow-y: hidden;
+    touch-action: none;
+    overscroll-behavior-y: contain;
+    
+
+}
+
+h3 > a{
+    text-decoration: none;
+}
+
+.card{
+
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 500px;
+    height: 530px;
+    
+
+}
+
+.card-skills{
+    width: 450px;
+    height: 500px;
+}
+
+
+
+.progress{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.progress-label {
+    text-align: start;
+    font-size: 12px;
+    color: #f5f5f5;
+}
+
+#wholepage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: black;
+    
+}
+
+section, .section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(0, 0);
+    transition: transform 0.4s ease-out;
+    margin: 0; padding: 0;
+    background-image: url("../img/bg-2.svg");
+  
+}
+
+
+.page {
+    
+    flex: 1 0 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    transform: translate(0, 0);
+    transition: transform 0.4s ease-out;
+    align-items: center;
+
+
+    
+}
+
+.sectionButtonContainer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    right: 3vw; 
+    color: rgb(30, 30, 30);
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+.sectionButtonContainer label, .page_selection label {
+    display: inline-flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255, 0.8);
+    transition: transform 0.2s;
+    margin: 12px 12px;
+    padding: 0px;
+    box-shadow: 0px 0px 8px rgba(0, 27, 160, 0.8);
+    cursor: pointer;
+}
+
+.sectionButtonContainer label::after, .page_selection label::after {
+    content: '';
+    display: inline-flex;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    padding: 12px;
+}
+
+.sectionButtonContainer input[type=radio]:checked + label::after, .page_selection input[type=radio]:checked + label::after {
+   display: none;
+}
+
+
+.sectionButtonContainer input[type=radio]:checked + label, .page_selection input[type=radio]:checked + label  {
+    transform: scale(2.2);
+    transition: transform 0.2s;
+}
+
+
+
+.page_selection {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 2vh;
+    left: 40%; 
+    color: rgb(30, 30, 30);
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    z-index: 999999; 
+
+}
+
+h3{
+    color: #f5f5f5;
+}
+
+.card-body > a{
+    text-decoration: none;
+}
+
+.hobbie:hover{
+    /* gradient red and yellow box shadow */
+    background: linear-gradient(60deg,
+    #5ff281, #5f86f2, #a65ff2, #f25fd0, #f25f61, #f2cb5f) 0 50%;;
+    background-size: 300% 300%;
+    animation: gradient-animation 4s alternate infinite;
+    border-radius: 8px;
+}
+
+@keyframes gradient-animation {
+    50%{
+        background-position: 100% 50%;
+        /* shadow animation */
+    }
+}
+
+.proyecto:hover{
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px rgba(0, 27, 160, 0.8);
+}
+
+
+
+.icon_wrapper{
+    margin: 0 auto;
+    display: flex;
+    gap: 20px
+}
+
+
+/* ======================== */
+.icon{
+    text-decoration: none;
+    display: inline-block; /*Makes the icons inline block level elements. This will let us animate the transform property.*/ 
+    font-size: 44px;
+    animation: float 3s ease-in-out infinite; /*Applies the float keyframe animation over 5s and makes it run infinitely.*/
+}
+
+/*
+    The following styles will add linear gradient background to the text then it will clip the text shape into the background.
+    The result is gradient text.
+*/
+.ri-github-line{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* This is the first item so no animation delay needed.*/
+}
+
+.ri-linkedin-box-line{
+    color: #1877f2;
+    animation-delay: 1s; /* Adds a animation delay of 1 seconds.*/
+}
+
+.ri-whatsapp-line{
+    color: #25d366;
+    animation-delay: 2s; /* Adds a animation delay of 2 seconds.*/
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0); /*The starting point of the animation is 0.*/
+    }
+    50%{
+        transform: translateY(-5px); /*The middle point of the animation is -15xp. This will move the element up.*/
+    }
+    100%{
+        transform: translateY(0); /*The last point of the animation is going back to the starting state of 0.*/
+    }
+}
+
+.g{
+    color: rgba(0, 0, 255, 0.7)
+
+}
+
+.ma{
+    color:rgba(255, 0, 0, 0.7) 
+}
+
+.i{
+    color: rgba(255, 255, 0, 0.7)
+}
+
+.l{
+    color: rgba(0, 128, 0, 0.7)
+}
+
+
+
+
+
+
+/* ======================== */
+
+.mouse {
+    
+    margin: 10px auto;
+    width: 25px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+    /*This is used here for aligning the mouse wheel in the middle of the mouse container. We could use align items and justify content center here,
+    but in this situation it's easier to do a margin of auto on the mouse wheel itself and it will do the same thing with one less line of css.*/
+}
+
+.mouse-wheel {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+    /*Centers the mouse wheel vertically and horizontally (because of help from display: flex on the mouse).*/
+    animation: move-wheel 2s linear infinite;
+    
+}
+
+/* Here at the start of the animation the mouse wheel will have an opacity of 0 and it will be moved up. At the end the opacity is 1 and it is moved down */
+@keyframes move-wheel {
+    0% {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
